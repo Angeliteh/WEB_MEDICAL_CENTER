@@ -1,0 +1,263 @@
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<!-- 
+THEME: Medic | Medical HTML Template
+VERSION: 1.0.0
+AUTHOR: Themefisher
+
+HOMEPAGE: https://themefisher.com/products/medic-medical-template/
+DEMO: https://demo.themefisher.com/themefisher/medic/
+GITHUB: https://github.com/themefisher/Medic-Bootstrap-Medical-Template
+
+WEBSITE: https://themefisher.com
+TWITTER: https://twitter.com/themefisher
+FACEBOOK: https://www.facebook.com/themefisher
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+  <!-- ** Basic Page Needs ** -->
+  <meta charset="utf-8">
+  <title>Medic | Medical HTML Template</title>
+
+  <!-- ** Mobile Specific Metas ** -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Medical HTML Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Medical HTML Template v1.0">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <!-- FancyBox -->
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="plugins/animation/animate.min.css">
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="plugins/jquery-ui/jquery-ui.css">
+  <!-- timePicker -->
+  <link rel="stylesheet" href="plugins/timePicker/timePicker.css">
+  
+  <!-- Stylesheets -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- PREMIUM FEATURES STYLES -->
+  <link href="css/dark-mode.css" rel="stylesheet">
+  <link href="css/whatsapp-button.css" rel="stylesheet">
+  <link href="css/pwa-styles.css" rel="stylesheet">
+  <link href="css/accessibility.css" rel="stylesheet">
+  <link href="css/security-styles.css" rel="stylesheet">
+
+  <!-- Team Page Styles -->
+  <link href="css/team-page-styles.css" rel="stylesheet">
+
+  <!--Favicon-->
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#1e88e5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Centro Médico">
+  <link rel="manifest" href="manifest.json">
+
+</head>
+
+
+<body>
+  <div class="page-wrapper">
+
+  
+
+<!-- Header Component -->
+<div id="header-placeholder"></div>
+
+
+<!-- Navbar Component -->
+<div id="navbar-placeholder"></div>
+
+<!--Page Title-->
+<section class="page-title text-center" style="background-image:url(images/background/3.jpg);">
+    <div class="container">
+        <div class="title-text">
+            <h1 data-translate="teamPage.hero.title">Team</h1>
+            <ul class="title-menu clearfix">
+                <li>
+                    <a href="index.html" data-translate="teamPage.hero.breadcrumb.home">home &nbsp;/</a>
+                </li>
+                <li data-translate="teamPage.hero.breadcrumb.current">Team</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+<section class="team-section section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center">
+          <h3 data-translate="teamPage.section.title">Great
+            <span data-translate="teamPage.section.titleSpan">Team</span>
+          </h3>
+          <p data-translate="teamPage.section.description">Leverage agile frameworks to provide a robust synopsis for high level overv-
+            <br>iews. Iterative approaches to corporate strategy...</p>
+        </div>
+        <!-- Nav tabs -->
+        <div class="tabs">
+          <ul class="nav nav-tabs justify-content-center" id="teamTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="cardiology-tab" data-toggle="tab" href="#cardiology" role="tab" aria-controls="cardiology" aria-selected="true" data-translate="teamPage.tabs.cardiology">Cardiología</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pediatrics-tab" data-toggle="tab" href="#pediatrics" role="tab" aria-controls="pediatrics" aria-selected="false" data-translate="teamPage.tabs.pediatrics">Pediatría</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="traumatology-tab" data-toggle="tab" href="#traumatology" role="tab" aria-controls="traumatology" aria-selected="false" data-translate="teamPage.tabs.traumatology">Traumatología</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="specialties-tab" data-toggle="tab" href="#specialties" role="tab" aria-controls="specialties" aria-selected="false" data-translate="teamPage.tabs.specialties">Otras Especialidades</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" id="teamTab">
+          <!--Start single tab content-->
+          <div class="team-members tab-pane fade show active" id="cardiology">
+            <div class="row" id="cardiology-doctors">
+              <!-- Doctores de Cardiología se poblarán dinámicamente -->
+            </div>
+          </div>
+          <!--End single tab content-->
+          <!--Start single tab content-->
+          <div class="team-members tab-pane fade" id="pediatrics">
+            <div class="row" id="pediatrics-doctors">
+              <!-- Doctores de Pediatría se poblarán dinámicamente -->
+            </div>
+          </div>
+          <!--End single tab content-->
+          <!--Start single tab content-->
+          <div class="team-members tab-pane fade" id="traumatology">
+            <div class="row" id="traumatology-doctors">
+              <!-- Doctores de Traumatología se poblarán dinámicamente -->
+            </div>
+          </div>
+          <!--End single tab content-->
+          <!--Start single tab content-->
+          <div class="team-members tab-pane fade" id="specialties">
+            <div class="row" id="specialties-doctors">
+              <!-- Otras especialidades se poblarán dinámicamente -->
+            </div>
+          </div>
+          <!--End single tab content-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Component -->
+<div id="footer-placeholder"></div>
+
+<!-- WhatsApp Component -->
+<div id="whatsapp-placeholder"></div>
+
+<!-- scroll-to-top -->
+<div id="back-to-top" class="back-to-top">
+  <i class="fa fa-angle-up"></i>
+</div>
+
+</div>
+<!--End pagewrapper-->
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".header-top">
+  <span class="icon fa fa-angle-up"></span>
+</div>
+
+
+<!-- jquery -->
+<script src="plugins/jquery.min.js"></script>
+<!-- Popper.js v1 (required for Bootstrap 4 dropdowns) -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- bootstrap -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Slick Slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/slick/slick-animation.min.js"></script>
+<!-- FancyBox -->
+<script src="plugins/fancybox/jquery.fancybox.min.js" defer></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+<script src="plugins/google-map/gmap.js" defer></script>
+
+<!-- jquery-ui -->
+<script src="plugins/jquery-ui/jquery-ui.js" defer></script>
+<!-- timePicker -->
+<script src="plugins/timePicker/timePicker.js" defer></script>
+
+<!-- script js -->
+<script src="js/script.js"></script>
+
+<!-- LANGUAGE SYSTEM -->
+<script src="js/translations.js"></script>
+<script src="js/language-manager.js"></script>
+
+<!-- DARK MODE SYSTEM -->
+<script src="js/dark-mode.js"></script>
+
+<!-- WHATSAPP BUSINESS SYSTEM -->
+<script src="js/whatsapp-config.js"></script>
+<script src="js/whatsapp-business.js"></script>
+
+<!-- SEO ADVANCED SYSTEM -->
+<script src="js/seo-config.js"></script>
+<script src="js/seo-optimizer.js"></script>
+
+<!-- PWA SYSTEM -->
+<script src="js/pwa-config.js"></script>
+<script src="js/pwa-manager.js"></script>
+<script src="js/pwa-icon-generator.js"></script>
+
+<!-- ACCESSIBILITY SYSTEM -->
+<script src="js/accessibility-config.js"></script>
+<script src="js/accessibility-manager.js"></script>
+
+<!-- SECURITY SYSTEM -->
+<script src="js/security-config.js"></script>
+<script src="js/security-manager.js"></script>
+
+<!-- FORM HANDLER SYSTEM -->
+<script src="js/form-handler-config.js"></script>
+<script src="js/form-validator.js"></script>
+<script src="js/form-handler-manager.js"></script>
+
+<!-- MODERN DATEPICKER -->
+<script src="js/modern-datepicker.js"></script>
+
+<!-- MEDICAL DATA SYSTEM -->
+<script src="js/medical-data.js"></script>
+<script src="js/medical-integration.js"></script>
+
+<!-- Component Loader -->
+<script src="js/component-loader.js"></script>
+
+<!-- Sticky Header -->
+<script src="js/sticky-header.js"></script>
+
+</body>
+
+</html>

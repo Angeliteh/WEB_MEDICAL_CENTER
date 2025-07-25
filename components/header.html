@@ -1,0 +1,90 @@
+<!--Header Upper - Redesigned Clean-->
+<section class="new-compact-header" id="main-content" tabindex="-1">
+  <div class="container-fluid px-4">
+    <div class="header-content">
+      <!-- Logo al extremo izquierdo -->
+      <div class="logo-section">
+        <a href="index.html" tabindex="0">
+          <img src="images/logo.png" alt="Centro Médico Logo" class="logo-img">
+        </a>
+      </div>
+      
+      <!-- Información de contacto en línea -->
+      <div class="contact-section">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="far fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label" data-translate="header.email">Email</span>
+            <a href="mailto:contacto@centromedico.com" class="contact-value" data-translate="header.emailAddress">contacto@centromedico.com</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label" data-translate="header.phone">Teléfono</span>
+            <span class="contact-value" data-translate="header.phoneNumber">+ (52) 55 1234-5678</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles de Usuario (Modo Oscuro + Idioma) -->
+      <div class="user-controls-section">
+        <!-- Dark Mode Toggle -->
+        <button class="btn border-0 bg-transparent user-control-btn" id="darkModeToggle" title="Switch to Light Mode" tabindex="0" aria-label="Botón de modo oscuro">
+          <i class="fas fa-sun" id="darkModeIcon"></i>
+        </button>
+        <!-- Language selector will be inserted here dynamically -->
+      </div>
+
+      <!-- Botón de cita -->
+      <div class="appointment-section">
+        <a href="appointment.html" class="appointment-btn" tabindex="0" data-translate="header.appointmentBtn">Agendar Cita</a>
+      </div>
+
+      <!-- Controles Móviles (Todos los controles para móvil) -->
+      <div class="mobile-controls-section">
+        <!-- Dark Mode Toggle para móvil -->
+        <button class="btn border-0 bg-transparent mobile-control-btn" id="darkModeToggleMobile"
+                title="Cambiar modo oscuro" tabindex="0" aria-label="Botón de modo oscuro móvil">
+          <i class="fas fa-sun" id="darkModeIconMobile"></i>
+        </button>
+
+        <!-- Language selector para móvil -->
+        <div class="mobile-language-selector">
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mobile-control-btn" href="#" id="languageDropdownMobile"
+               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+               tabindex="0" aria-label="Selector de idioma móvil">
+              <i class="fas fa-globe"></i> <span id="currentLangMobile">ES</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdownMobile">
+              <a class="dropdown-item" href="#" data-lang="es" tabindex="0">
+                <span class="flag-emoji mr-2">🇪🇸</span> Español
+              </a>
+              <a class="dropdown-item" href="#" data-lang="en" tabindex="0">
+                <span class="flag-emoji mr-2">🇺🇸</span> English
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón de accesibilidad -->
+        <button class="btn border-0 bg-transparent mobile-control-btn" id="accessibility-toggle-mobile"
+                title="Opciones de Accesibilidad" tabindex="0" aria-label="Abrir opciones de accesibilidad">
+          <i class="fas fa-universal-access"></i>
+        </button>
+
+        <!-- Botón hamburguesa para móvil -->
+        <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarLinks"
+                aria-controls="navbarLinks" aria-expanded="false" aria-label="Abrir menú de navegación" tabindex="0">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

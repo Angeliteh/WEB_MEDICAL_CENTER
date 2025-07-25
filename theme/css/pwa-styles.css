@@ -1,0 +1,373 @@
+/* ===================================
+   PWA SYSTEM STYLES
+   =================================== */
+
+/* PWA Install Button */
+.pwa-install-button {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 1001;
+  max-width: 320px;
+  background: linear-gradient(135deg, #1e88e5 0%, #1976d2 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(30, 136, 229, 0.3);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pwa-install-button.show {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pwa-install-button.hidden {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pwa-install-content {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  position: relative;
+}
+
+.pwa-install-icon {
+  font-size: 32px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.pwa-install-text {
+  flex: 1;
+  margin-right: 12px;
+}
+
+.pwa-install-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.pwa-install-subtitle {
+  font-size: 13px;
+  opacity: 0.9;
+  line-height: 1.3;
+}
+
+.pwa-install-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.pwa-install-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.pwa-install-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pwa-install-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* PWA Notifications */
+.pwa-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1002;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  animation: pwa-slide-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.pwa-notification-success {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+}
+
+.pwa-notification-info {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: white;
+}
+
+.pwa-notification-update {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+}
+
+.pwa-notification-content {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  position: relative;
+}
+
+.pwa-notification-message {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-right: 12px;
+}
+
+.pwa-notification-action {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: all 0.2s ease;
+}
+
+.pwa-notification-action:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.pwa-notification-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pwa-notification-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* PWA Connection Status */
+.pwa-offline::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff5722, #ff9800);
+  z-index: 1003;
+  animation: pwa-pulse 2s infinite;
+}
+
+.pwa-online::before {
+  display: none;
+}
+
+/* PWA Standalone Mode */
+.pwa-standalone {
+  /* Ajustes para modo standalone */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.pwa-standalone .navbar {
+  padding-top: calc(env(safe-area-inset-top) + 10px);
+}
+
+/* PWA Splash Screen Simulation */
+.pwa-splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e88e5 0%, #1976d2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.pwa-splash-logo {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  margin-bottom: 24px;
+  animation: pwa-bounce 1s infinite alternate;
+}
+
+.pwa-splash-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.pwa-splash-subtitle {
+  font-size: 16px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes pwa-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pwa-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes pwa-bounce {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .pwa-install-button {
+    right: 10px;
+    bottom: 80px;
+    max-width: calc(100vw - 20px);
+  }
+  
+  .pwa-install-content {
+    padding: 12px;
+  }
+  
+  .pwa-install-icon {
+    font-size: 28px;
+    margin-right: 10px;
+  }
+  
+  .pwa-install-title {
+    font-size: 15px;
+  }
+  
+  .pwa-install-subtitle {
+    font-size: 12px;
+  }
+  
+  .pwa-notification {
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .pwa-install-button {
+    bottom: 70px;
+  }
+  
+  .pwa-install-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 12px;
+  }
+  
+  .pwa-install-icon {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  
+  .pwa-install-text {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+
+/* Dark Mode Support */
+body.dark-mode .pwa-install-button {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.4);
+}
+
+body.dark-mode .pwa-notification-success {
+  background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
+}
+
+body.dark-mode .pwa-notification-info {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+}
+
+body.dark-mode .pwa-notification-update {
+  background: linear-gradient(135deg, #f57c00 0%, #ef6c00 100%);
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .pwa-standalone {
+    padding-top: constant(safe-area-inset-top);
+    padding-bottom: constant(safe-area-inset-bottom);
+  }
+  
+  .pwa-standalone .navbar {
+    padding-top: calc(constant(safe-area-inset-top) + 10px);
+  }
+}

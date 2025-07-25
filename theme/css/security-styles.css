@@ -1,0 +1,305 @@
+/* ===================================
+   SECURITY SYSTEM STYLES
+   Advanced Security Notifications
+   =================================== */
+
+/* Security Notifications */
+.security-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  max-width: 400px;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(255, 107, 107, 0.3);
+  animation: slideInRight 0.3s ease-out;
+  border-left: 4px solid #ff4757;
+}
+
+.security-notification-content {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.security-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.security-message {
+  flex: 1;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.security-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.security-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Security Status Indicator */
+.security-status {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(30, 136, 229, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.security-status:hover {
+  background: rgba(30, 136, 229, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+}
+
+.security-status.high-security {
+  background: rgba(76, 175, 80, 0.9);
+}
+
+.security-status.maximum-security {
+  background: rgba(255, 193, 7, 0.9);
+  color: #333;
+}
+
+.security-status.alert {
+  background: rgba(244, 67, 54, 0.9);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.9; }
+  50% { opacity: 1; }
+  100% { opacity: 0.9; }
+}
+
+/* Form Security Indicators */
+.form-security-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #28a745;
+  margin-left: 8px;
+}
+
+.form-security-indicator.warning {
+  color: #ffc107;
+}
+
+.form-security-indicator.error {
+  color: #dc3545;
+}
+
+.form-security-icon {
+  font-size: 14px;
+}
+
+/* Secure Form Styling */
+.secure-form {
+  position: relative;
+}
+
+.secure-form::before {
+  content: '🔒';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #28a745;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  z-index: 10;
+}
+
+/* Security Headers Visual Indicator */
+.security-headers-active {
+  border-top: 2px solid #28a745;
+}
+
+/* Rate Limiting Warning */
+.rate-limit-warning {
+  background: linear-gradient(135deg, #ffc107, #ff8f00);
+  color: #333;
+  border-left-color: #ff8f00;
+}
+
+/* CSRF Protection Indicator */
+.csrf-protected {
+  position: relative;
+}
+
+.csrf-protected::after {
+  content: 'CSRF Protected';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 10px;
+  color: #28a745;
+  font-weight: 600;
+}
+
+/* XSS Protection Styles */
+.xss-blocked {
+  background: #ffe6e6 !important;
+  border: 2px solid #ff4757 !important;
+  color: #333 !important;
+}
+
+.xss-blocked::placeholder {
+  color: #ff4757 !important;
+}
+
+/* Security Log Viewer (for development) */
+.security-log {
+  position: fixed;
+  bottom: 60px;
+  left: 20px;
+  max-width: 300px;
+  max-height: 200px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-y: auto;
+  z-index: 999;
+  display: none;
+}
+
+.security-log.visible {
+  display: block;
+}
+
+.security-log-entry {
+  margin-bottom: 4px;
+  padding: 2px 0;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.security-log-entry.warning {
+  color: #ffff00;
+}
+
+.security-log-entry.error {
+  color: #ff4757;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .security-notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+  
+  .security-status {
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+  
+  .security-log {
+    bottom: 50px;
+    left: 10px;
+    right: 10px;
+    max-width: none;
+  }
+}
+
+/* Dark Mode Support */
+.dark-mode .security-notification {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .security-status {
+  backdrop-filter: blur(10px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .form-security-indicator {
+  filter: brightness(1.2);
+}
+
+/* High Contrast Mode Support */
+.high-contrast .security-notification {
+  background: #000000;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+}
+
+.high-contrast .security-status {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* Print Styles */
+@media print {
+  .security-notification,
+  .security-status,
+  .security-log {
+    display: none !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .security-notification {
+    animation: none !important;
+  }
+  
+  .security-status {
+    transition: none !important;
+  }
+  
+  .security-status.alert {
+    animation: none !important;
+  }
+}
