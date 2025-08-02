@@ -1,7 +1,7 @@
 // Service Worker - PWA System
 // Sistema completo de cache y funcionamiento offline
 
-const CACHE_NAME = 'centro-medico-v1.0.0';
+const CACHE_NAME = 'centro-medico-v1.1.0';
 const OFFLINE_URL = './offline.html';
 
 // Archivos críticos para el App Shell
@@ -179,27 +179,31 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(handleDefaultRequest(event.request));
 });
 
-// Manejar requests de navegación (páginas) - Cache First para mejor offline
+// Manejar requests de navegación (páginas) - Network First para contenido actualizado
 async function handleNavigationRequest(request) {
   try {
-    // Intentar cache primero para mejor experiencia offline
+    // NETWORK FIRST: Intentar red primero para contenido siempre actualizado
+    console.log('📄 Service Worker: Trying network first:', request.url);
+    const networkResponse = await fetch(request);
+
+    if (networkResponse.ok) {
+      // Cachear la nueva versión
+      const cache = await caches.open(CACHE_NAME);
+      cache.put(request, networkResponse.clone());
+      console.log('📄 Service Worker: Updated cache from network:', request.url);
+      return networkResponse;
+    }
+
+  } catch (error) {
+    console.log('📄 Service Worker: Network failed, trying cache:', request.url);
+
+    // Si falla la red, usar cache como fallback
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
-      console.log('📄 Service Worker: Serving from cache:', request.url);
-
-      // Actualizar en background si hay red
-      fetch(request).then(networkResponse => {
-        if (networkResponse.ok) {
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(request, networkResponse.clone());
-          });
-        }
-      }).catch(() => {
-        // Ignorar errores de red en background
-      });
-
+      console.log('📄 Service Worker: Serving from cache (offline):', request.url);
       return cachedResponse;
     }
+  }
 
     // Si no está en cache, intentar red
     const networkResponse = await fetch(request, {

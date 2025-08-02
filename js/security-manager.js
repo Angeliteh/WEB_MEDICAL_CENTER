@@ -445,7 +445,7 @@ class SecurityManager {
             "img-src 'self' data: https: https://maps.googleapis.com https://maps.gstatic.com",
             "font-src 'self' https://fonts.gstatic.com",
             "connect-src 'self' https://maps.googleapis.com https://*.googleapis.com",
-            "frame-src 'none'",
+            "frame-src 'self' https://www.google.com https://maps.google.com https://www.google.com/maps/embed",
             "object-src 'none'",
             "base-uri 'self'",
             "form-action 'self'"

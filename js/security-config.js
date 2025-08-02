@@ -34,7 +34,10 @@ const SECURITY_CONFIG = {
         allowedDomains: [
             'fonts.googleapis.com',
             'fonts.gstatic.com',
-            'maps.googleapis.com'
+            'maps.googleapis.com',
+            'www.google.com',
+            'maps.google.com',
+            'maps.gstatic.com'
         ]
     },
     

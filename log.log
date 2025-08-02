@@ -1,0 +1,332 @@
+index.html:186 [Intervention] Images loaded lazily and replaced with placeholders. Load events are deferred. See https://go.microsoft.com/fwlink/?linkid=2048113
+translations.js:2197 🌐 Translations loaded - ES/EN
+language-manager.js:257 🌐 Language Manager cargado
+whatsapp-config.js:135 📱 WhatsApp Business Manager loaded
+whatsapp-business.js:258 📱 WhatsApp Business Manager loaded
+seo-config.js:219 🔍 SEO Optimizer loaded
+seo-optimizer.js:607 🔍 SEO Optimizer loaded
+pwa-config.js:258 📱 PWA Manager loaded
+pwa-manager.js:446 📱 PWA Manager loaded
+pwa-icon-generator.js:254 🎨 PWA Icon Generator loaded
+pwa-icon-generator.js:255 💡 Use generateSectorIcons("medical") to generate icons
+accessibility-config.js:167 
+♿ ACCESSIBILITY SYSTEM - GUÍA DE CONFIGURACIÓN
+
+1. 🔧 NIVEL DE CUMPLIMIENTO:
+   - wcagLevel: AA (estándar) o AAA (máximo)
+   
+2. ⌨️ NAVEGACIÓN:
+   - keyboardNavigation: Navegación por teclado
+   - skipLinks: Enlaces de salto
+   
+3. 🎨 CONTRASTE:
+   - minimumRatio: 4.5 (AA) o 7.0 (AAA)
+   - highContrastMode: Modo alto contraste
+   
+4. 📝 TIPOGRAFÍA:
+   - minimumFontSize: Tamaño mínimo de fuente
+   - scalingEnabled: Escalado de fuente
+   
+5. 📱 PANEL:
+   - accessibilityPanel.enabled: Mostrar panel
+   - position: Posición del panel
+   
+📊 Configuración actual:
+♿ Sector: medical
+📋 WCAG Level: AAA
+🎯 Prioridad: maximum
+📝 Font mínimo: 18px
+🎨 Contraste mínimo: 7:1
+
+accessibility-manager.js:1145 ♿ Accessibility Manager loaded
+security-config.js:180 
+🔒 SECURITY SYSTEM - GUÍA DE CONFIGURACIÓN
+
+1. 🔧 NIVEL DE SEGURIDAD:
+   - level: low, medium, high, maximum
+   
+2. 🚫 XSS PROTECTION:
+   - strictMode: true/false
+   - sanitizeInputs: Sanitización automática
+   
+3. 🛡️ CSRF PROTECTION:
+   - tokenExpiry: Tiempo de vida del token
+   - validateAllForms: Validar todos los formularios
+   
+4. 🚦 RATE LIMITING:
+   - maxRequests: Máximo requests por minuto
+   - blockDuration: Tiempo de bloqueo
+   
+5. 🔍 MONITORING:
+   - alertThreshold: Umbral de alerta
+   - trackSuspiciousActivity: Rastrear actividad sospechosa
+   
+📊 Configuración actual:
+🔒 Sector: medical
+📋 Nivel: maximum
+🎯 Prioridad: maximum
+🚦 Max requests: 50/min
+🔍 Alert threshold: 3
+
+security-manager.js:849 🔒 Security Manager loaded
+form-handler-config.js:271 
+📝 FORM HANDLER SYSTEM - GUÍA DE CONFIGURACIÓN
+
+1. 🔧 AJAX FORMS:
+   - ajaxEnabled: Envío sin recargar página
+   - realTimeValidation: Validación en tiempo real
+   
+2. ✅ VALIDACIÓN:
+   - strictMode: true/false
+   - validateOnBlur: Validar al salir del campo
+   
+3. 🎨 FEEDBACK:
+   - showLoading: Mostrar spinner de carga
+   - autoHide: Auto-ocultar mensajes
+   
+4. 🔒 SEGURIDAD:
+   - csrfProtection: Protección CSRF automática
+   - rateLimiting: Limitar envíos por minuto
+   
+5. 💾 AUTO-SAVE:
+   - enabled: Guardar drafts automáticamente
+   - interval: Intervalo de guardado
+   
+📊 Configuración actual:
+📝 Sector: medical
+📋 AJAX: Enabled
+🎯 Prioridad: maximum
+✅ Validación estricta: true
+🔒 Max envíos/min: 3
+💾 Auto-save: Enabled
+
+form-validator.js:430 ✅ Form Validator loaded
+form-handler-manager.js:702 📝 Form Handler Manager loaded
+modern-datepicker.js:443 📅 Modern Datepicker loaded
+component-loader.js:158 🔧 Component Loader cargado
+language-manager.js:11 ✅ Traducciones cargadas correctamente
+language-manager.js:41 🔍 Contenedor .user-controls-section no encontrado
+language-manager.js:75 🔍 Encontrados 202 elementos con data-translate
+language-manager.js:150 🔍 Debug features.title:
+language-manager.js:151 - currentLanguage: es
+language-manager.js:152 - translations disponibles: (2) ['es', 'en']
+language-manager.js:153 - translation inicial: {meta: {…}, navigation: {…}, header: {…}, about: {…}, footer: {…}, …}
+language-manager.js:154 - features existe?: {title: 'Mejores Características', titleSpan: 'de Nuestro Hospital', subtitle: 'Contamos con las mejores instalaciones y servicios…brindar atención de calidad a nuestros pacientes.', items: {…}}
+language-manager.js:116 ✅ Se aplicaron 187 traducciones de 202 elementos
+language-manager.js:33 🌐 Language Manager inicializado - Idioma: es
+dark-mode.js:33 🌙 Dark Mode Manager initialized
+dark-mode.js:294 🌙 Dark Mode System fully initialized
+whatsapp-business.js:76  WhatsApp button elements not found
+setupWhatsAppButton @ whatsapp-business.js:76
+init @ whatsapp-business.js:59
+WhatsAppBusiness @ whatsapp-business.js:55
+(anonymous) @ whatsapp-business.js:255
+whatsapp-business.js:68 📱 WhatsApp Business initialized
+seo-optimizer.js:123 📝 Meta tags updated
+seo-optimizer.js:155 📋 Schema Markup generated
+seo-optimizer.js:280 🌐 Hreflang tags added
+seo-optimizer.js:298 🔗 Canonical URL set: http://127.0.0.1:5501/index.html
+seo-optimizer.js:315 📱 Open Graph tags updated
+seo-optimizer.js:328 🐦 Twitter Cards updated
+seo-optimizer.js:87 🔍 SEO Optimizer initialized
+seo-optimizer.js:88 📊 Business Type: MedicalOrganization
+seo-optimizer.js:89 🏢 Sector: medical
+accessibility-manager.js:100 ⌨️ Keyboard navigation configured
+accessibility-manager.js:482 ♿ Fixed 5 heading hierarchy issues
+accessibility-manager.js:181 🔊 Screen reader support configured
+accessibility-manager.js:569 🎨 Cleaned up slider elements (arrows preserved)
+accessibility-manager.js:543 🧹 Cleaned up specific ARIA issues
+accessibility-manager.js:504 🔧 Auto-fix accessibility issues completed
+accessibility-manager.js:803  ❌ Accessibility toggle button not found!
+setupPanelEvents @ accessibility-manager.js:803
+createAccessibilityPanel @ accessibility-manager.js:793
+init @ accessibility-manager.js:70
+AccessibilityManager @ accessibility-manager.js:49
+(anonymous) @ accessibility-manager.js:1072
+accessibility-manager.js:78 ♿ Accessibility Manager initialized
+accessibility-manager.js:79 🔧 WCAG 2.1 AA Compliance active
+security-manager.js:76 🔒 Security Manager initializing...
+security-manager.js:159 🔒 Security headers applied
+security-manager.js:178 🚫 XSS Protection enabled
+security-manager.js:339 🛡️ CSRF Protection enabled
+security-manager.js:460 🔐 Content Security Policy applied
+security-manager.js:479 🚦 Rate Limiting enabled
+security-manager.js:561 🔍 Security Monitoring enabled
+security-manager.js:649 🧹 Input Sanitization enabled
+security-manager.js:112 🛡️ Security Manager initialized
+security-manager.js:113 🔧 Security Level: MAXIMUM
+security-manager.js:114 🏥 Sector: medical
+cookie-manager.js:69 🍪 Cookie Manager initialized
+form-handler-manager.js:58 📝 Form Handler Manager initializing...
+form-handler-manager.js:122 📋 Form initialized: appointment-form
+form-handler-manager.js:94 📝 Initialized 1 forms
+form-handler-manager.js:74 📋 Form Handler Manager initialized
+form-handler-manager.js:75 🏥 Sector: medical
+form-handler-manager.js:76 ✅ AJAX: Enabled
+modern-datepicker.js:61 📅 Date field configured: appointment-datepicker
+modern-datepicker.js:28 📅 Modern Datepicker initialized
+medical-data.js:548 🏥 Medical Data System initialized
+medical-data.js:549 📊 Services loaded: 8
+medical-data.js:550 👨‍⚕️ Doctors loaded: 9
+medical-integration.js:632 🔧 Medical Integration System loading...
+medical-integration.js:223 🔧 Initializing integrations for page: index
+medical-integration.js:395 ✅ index-doctors populated with 3 featured doctors
+medical-integration.js:339 ✅ Index page integration initialized
+component-loader.js:16 🔧 Iniciando Component Loader...
+navbar-mobile.js:20 🍔 Mobile Navbar initializing...
+navbar-mobile.js:29 ✅ Mobile Navbar initialized
+mobile-controls-sync.js:19 📱 Mobile Controls Sync initializing...
+mobile-controls-sync.js:53 🌙 Setting up dark mode sync...
+mobile-controls-sync.js:54 Desktop toggle: false
+mobile-controls-sync.js:55 Mobile menu toggle: false
+mobile-controls-sync.js:56 Mobile toggle: false
+mobile-controls-sync.js:86  ⚠️ Mobile dark mode toggle not found
+setupDarkModeSync @ mobile-controls-sync.js:86
+setup @ mobile-controls-sync.js:22
+(anonymous) @ mobile-controls-sync.js:12
+mobile-controls-sync.js:229 🌐 Language sync configured
+mobile-controls-sync.js:237 ♿ Setting up accessibility sync...
+mobile-controls-sync.js:238 Desktop toggle: false
+mobile-controls-sync.js:239 Mobile toggle: false
+mobile-controls-sync.js:240 Mobile menu toggle: false
+mobile-controls-sync.js:288  ⚠️ Mobile accessibility toggle not found
+setupAccessibilitySync @ mobile-controls-sync.js:288
+setup @ mobile-controls-sync.js:24
+(anonymous) @ mobile-controls-sync.js:12
+mobile-controls-sync.js:42 ✅ Mobile Controls Sync initialized
+sticky-header.js:179 🔄 Intentando inicializar Sticky Header...
+sticky-header.js:22 🔍 Header sticky no encontrado
+sticky-header.js:23 🔍 Headers disponibles: NodeList []
+pwa-manager.js:85 ✅ PWA: Service Worker registered successfully
+pwa-manager.js:86 📍 PWA: Scope: http://127.0.0.1:5501/
+pwa-manager.js:94 🚀 PWA: Service Worker active and ready!
+pwa-manager.js:69 📱 PWA Manager initialized
+pwa-manager.js:70 🔧 App Name: Centro Médico Profesional
+pwa-manager.js:71 📶 Online: true
+sw.js:221  Uncaught SyntaxError: Unexpected token 'catch' (at sw.js:221:5)
+language-manager.js:75 🔍 Encontrados 206 elementos con data-translate
+language-manager.js:150 🔍 Debug features.title:
+language-manager.js:151 - currentLanguage: es
+language-manager.js:152 - translations disponibles: (2) ['es', 'en']
+language-manager.js:153 - translation inicial: {meta: {…}, navigation: {…}, header: {…}, about: {…}, footer: {…}, …}
+language-manager.js:154 - features existe?: {title: 'Mejores Características', titleSpan: 'de Nuestro Hospital', subtitle: 'Contamos con las mejores instalaciones y servicios…brindar atención de calidad a nuestros pacientes.', items: {…}}
+language-manager.js:116 ✅ Se aplicaron 190 traducciones de 206 elementos
+language-manager.js:242 🔄 Traducciones aplicadas después de inicialización
+component-loader.js:47 ✅ Componente header cargado
+security-manager.js:731  🚨 Security Event: XSS_ATTEMPT {element: 'SECTION', content: '\n  <div class="container-fluid px-4">\n    <div class="header-content">\n      \x3C!-- Logo al extremo iz', timestamp: '2025-08-02T22:17:06.774Z'}
+logSecurityEvent @ security-manager.js:731
+(anonymous) @ security-manager.js:212
+scanElementForThreats @ security-manager.js:210
+(anonymous) @ security-manager.js:187
+(anonymous) @ security-manager.js:185
+(anonymous) @ security-manager.js:183
+childList
+loadComponent @ component-loader.js:44
+await in loadComponent
+init @ component-loader.js:19
+(anonymous) @ component-loader.js:141
+index.html:1  Uncaught (in promise) TypeError: Failed to update a ServiceWorker for scope ('http://127.0.0.1:5501/') with script ('http://127.0.0.1:5501/sw.js'): ServiceWorker script evaluation failed
+language-manager.js:28 🔄 Reintentando crear selector de idioma...
+language-manager.js:44 ✅ Contenedor .user-controls-section encontrado: <div class=​"user-controls-section">​…​</div>​flex
+component-loader.js:47 ✅ Componente navbar cargado
+component-loader.js:47 ✅ Componente footer cargado
+security-manager.js:731  🚨 Security Event: XSS_ATTEMPT {element: 'FOOTER', content: '\n  <div class="footer-top">\n    <div class="container">\n      <div class="row justify-content-center', timestamp: '2025-08-02T22:17:07.141Z'}
+logSecurityEvent @ security-manager.js:731
+(anonymous) @ security-manager.js:212
+scanElementForThreats @ security-manager.js:210
+(anonymous) @ security-manager.js:187
+(anonymous) @ security-manager.js:185
+(anonymous) @ security-manager.js:183
+childList
+loadComponent @ component-loader.js:44
+await in loadComponent
+init @ component-loader.js:21
+await in init
+(anonymous) @ component-loader.js:141
+sticky-header.js:179 🔄 Intentando inicializar Sticky Header...
+sticky-header.js:27 ✅ Header encontrado: <section class=​"new-compact-header sticky-visible" id=​"main-content" tabindex=​"-1">​…​</section>​
+sticky-header.js:28 ✅ Navbar encontrado: <nav class=​"navbar navbar-expand-lg navbar-dark sticky-visible" role=​"navigation" id=​"navigation" tabindex=​"-1">​…​</nav>​flex
+sticky-header.js:37 📌 Sticky Header Manager initialized
+component-loader.js:47 ✅ Componente whatsapp cargado
+component-loader.js:27 ✅ Todos los componentes cargados
+component-loader.js:147 📄 Página actual: index
+navbar-mobile.js:59 🔘 Toggle button configured
+navbar-mobile.js:155 🎯 Auto-close configured
+navbar-mobile.js:191 ✨ Animations configured
+mobile-controls-sync.js:28 📱 Retrying mobile controls setup...
+mobile-controls-sync.js:53 🌙 Setting up dark mode sync...
+mobile-controls-sync.js:54 Desktop toggle: true
+mobile-controls-sync.js:55 Mobile menu toggle: true
+mobile-controls-sync.js:56 Mobile toggle: true
+mobile-controls-sync.js:82 🌙 Mobile menu toggle configured
+mobile-controls-sync.js:117 🌙 Mobile toggle configured
+mobile-controls-sync.js:134 🌙 Dark mode sync configured
+mobile-controls-sync.js:229 🌐 Language sync configured
+mobile-controls-sync.js:237 ♿ Setting up accessibility sync...
+mobile-controls-sync.js:238 Desktop toggle: true
+mobile-controls-sync.js:239 Mobile toggle: true
+mobile-controls-sync.js:240 Mobile menu toggle: true
+mobile-controls-sync.js:262 ♿ Mobile menu accessibility configured
+mobile-controls-sync.js:284 ♿ Mobile accessibility configured
+mobile-controls-sync.js:292 ♿ Accessibility sync configured
+language-manager.js:44 ✅ Contenedor .user-controls-section encontrado: <div class=​"user-controls-section accessibility-font-fix">​…​</div>​flex
+language-manager.js:75 🔍 Encontrados 231 elementos con data-translate
+language-manager.js:150 🔍 Debug features.title:
+language-manager.js:151 - currentLanguage: es
+language-manager.js:152 - translations disponibles: (2) ['es', 'en']
+language-manager.js:153 - translation inicial: {meta: {…}, navigation: {…}, header: {…}, about: {…}, footer: {…}, …}
+language-manager.js:154 - features existe?: {title: 'Mejores Características', titleSpan: 'de Nuestro Hospital', subtitle: 'Contamos con las mejores instalaciones y servicios…brindar atención de calidad a nuestros pacientes.', items: {…}}
+language-manager.js:116 ✅ Se aplicaron 210 traducciones de 231 elementos
+language-manager.js:33 🌐 Language Manager inicializado - Idioma: es
+dark-mode.js:208 Charts updated for dark mode
+dark-mode.js:214 Third-party widgets updated for dark mode
+dark-mode.js:33 🌙 Dark Mode Manager initialized
+component-loader.js:67 🌙 Dark Mode reinicializado después de componentes
+whatsapp-business.js:68 📱 WhatsApp Business initialized
+component-loader.js:78 📱 WhatsApp Business reinicializado después de componentes
+accessibility-manager.js:100 ⌨️ Keyboard navigation configured
+accessibility-manager.js:482 ♿ Fixed 5 heading hierarchy issues
+accessibility-manager.js:181 🔊 Screen reader support configured
+accessibility-manager.js:569 🎨 Cleaned up slider elements (arrows preserved)
+accessibility-manager.js:543 🧹 Cleaned up specific ARIA issues
+accessibility-manager.js:504 🔧 Auto-fix accessibility issues completed
+accessibility-manager.js:806 ✅ Accessibility toggle button found: <button class=​"btn border-0 bg-transparent user-control-btn accessibility-touch-target accessibility-font-fix accessibility-enhanced" id=​"accessibility-toggle" title=​"Opciones de Accesibilidad" tabindex=​"0" aria-label=​"Abrir opciones de accesibilidad">​…​</button>​flex
+accessibility-manager.js:78 ♿ Accessibility Manager initialized
+accessibility-manager.js:79 🔧 WCAG 2.1 AA Compliance active
+component-loader.js:85 ♿ Accessibility Manager reinicializado después de componentes
+language-manager.js:75 🔍 Encontrados 235 elementos con data-translate
+language-manager.js:150 🔍 Debug features.title:
+language-manager.js:151 - currentLanguage: es
+language-manager.js:152 - translations disponibles: (2) ['es', 'en']
+language-manager.js:153 - translation inicial: {meta: {…}, navigation: {…}, header: {…}, about: {…}, footer: {…}, …}
+language-manager.js:154 - features existe?: {title: 'Mejores Características', titleSpan: 'de Nuestro Hospital', subtitle: 'Contamos con las mejores instalaciones y servicios…brindar atención de calidad a nuestros pacientes.', items: {…}}
+language-manager.js:116 ✅ Se aplicaron 214 traducciones de 235 elementos
+sticky-header.js:27 ✅ Header encontrado: <section class=​"new-compact-header sticky-visible" id=​"main-content" tabindex=​"-1">​…​</section>​
+sticky-header.js:28 ✅ Navbar encontrado: <nav class=​"navbar navbar-expand-lg navbar-dark sticky-visible" role=​"navigation" id=​"navigation" tabindex=​"-1">​…​</nav>​flex
+sticky-header.js:37 📌 Sticky Header Manager initialized
+component-loader.js:96 📌 Sticky Header inicializado después de componentes
+component-loader.js:99 🔄 Managers reinicializados
+language-manager.js:75 🔍 Encontrados 235 elementos con data-translate
+language-manager.js:150 🔍 Debug features.title:
+language-manager.js:151 - currentLanguage: es
+language-manager.js:152 - translations disponibles: (2) ['es', 'en']
+language-manager.js:153 - translation inicial: {meta: {…}, navigation: {…}, header: {…}, about: {…}, footer: {…}, …}
+language-manager.js:154 - features existe?: {title: 'Mejores Características', titleSpan: 'de Nuestro Hospital', subtitle: 'Contamos con las mejores instalaciones y servicios…brindar atención de calidad a nuestros pacientes.', items: {…}}
+language-manager.js:116 ✅ Se aplicaron 214 traducciones de 235 elementos
+language-manager.js:252 🔄 Traducciones aplicadas después de load completo
+accessibility-manager.js:1087 🔍 Running final accessibility check...
+accessibility-manager.js:569 🎨 Cleaned up slider elements (arrows preserved)
+accessibility-manager.js:543 🧹 Cleaned up specific ARIA issues
+accessibility-manager.js:1099 🎉 Accessibility score: EXCELLENT (100/100)
+mobile-controls-sync.js:36 📱 Final retry mobile controls setup...
+mobile-controls-sync.js:53 🌙 Setting up dark mode sync...
+mobile-controls-sync.js:54 Desktop toggle: true
+mobile-controls-sync.js:55 Mobile menu toggle: true
+mobile-controls-sync.js:56 Mobile toggle: true
+mobile-controls-sync.js:134 🌙 Dark mode sync configured
+mobile-controls-sync.js:229 🌐 Language sync configured
+mobile-controls-sync.js:237 ♿ Setting up accessibility sync...
+mobile-controls-sync.js:238 Desktop toggle: true
+mobile-controls-sync.js:239 Mobile toggle: true
+mobile-controls-sync.js:240 Mobile menu toggle: true
+mobile-controls-sync.js:292 ♿ Accessibility sync configured
