@@ -1,4 +1,4 @@
-// Sistema de traducciones para Plantilla Médica Original
+// Sistema de traducciones para Centro Médico Profesional
 // Soporte para Español (ES) e Inglés (EN)
 
 const translations = {
@@ -57,9 +57,9 @@ const translations = {
                 description: 'Somos un centro médico profesional comprometido con brindar la mejor atención médica a nuestros pacientes con tecnología de vanguardia.'
             },
             contact: {
-                address: 'Modamba, NY 80021, Estados Unidos',
-                email: 'support@medic.com',
-                phone: '(88017) +123 4567'
+                address: 'Av. Reforma 123, Ciudad de México, CDMX 06600',
+                email: 'contacto@centromedico.com',
+                phone: '+ (52) 55 1234-5678'
             },
 
         },
@@ -1853,9 +1853,9 @@ const translations = {
                 description: "We are a professional medical center committed to providing the best medical care to our patients with cutting-edge technology."
             },
             contact: {
-                address: "Modamba, NY 80021, United States",
-                email: "support@medic.com",
-                phone: "(88017) +123 4567"
+                address: "Av. Reforma 123, Ciudad de México, CDMX 06600",
+                email: "contacto@centromedico.com",
+                phone: "+ (52) 55 1234-5678"
             },
             services: {
                 title: "Services",

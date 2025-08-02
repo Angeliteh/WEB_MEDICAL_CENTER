@@ -36,11 +36,11 @@ class StickyHeaderManager {
         this.bindEvents();
         console.log('📌 Sticky Header Manager initialized');
 
-        // Test automático después de 3 segundos
-        setTimeout(() => {
-            console.log('🧪 Iniciando test automático del sticky header...');
-            this.test();
-        }, 3000);
+        // Test automático desactivado para evitar animaciones molestas
+        // setTimeout(() => {
+        //     console.log('🧪 Iniciando test automático del sticky header...');
+        //     this.test();
+        // }, 3000);
     }
 
     bindEvents() {

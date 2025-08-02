@@ -215,35 +215,8 @@ SEO_CONFIG.defaultTitles = sectorConfig.defaultTitle;
 SEO_CONFIG.defaultDescriptions = sectorConfig.defaultDescription;
 SEO_CONFIG.sectorKeywords = sectorConfig.keywords;
 
-// 📋 GUÍA DE CONFIGURACIÓN RÁPIDA
-console.log(`
-🔍 SEO ADVANCED - GUÍA DE CONFIGURACIÓN
-
-1. 🏢 INFORMACIÓN DEL NEGOCIO:
-   - siteName: Nombre de tu negocio
-   - sector: medical, legal, creative, business
-   
-2. 📞 CONTACTO (OBLIGATORIO):
-   - phone: Teléfono con código de país
-   - email: Email principal del negocio
-   
-3. 📍 DIRECCIÓN (IMPORTANTE PARA SEO LOCAL):
-   - Completar todos los campos de address
-   
-4. 🌐 WEB:
-   - url: URL completa del sitio
-   - logo: Ruta al logo
-   
-5. 📱 REDES SOCIALES:
-   - Agregar URLs reales de redes sociales
-   
-📊 Configuración actual:
-🏢 Negocio: ${SEO_CONFIG.siteName}
-📋 Sector: ${SEO_CONFIG.sector}
-🔧 Tipo: ${SEO_CONFIG.businessType}
-📞 Teléfono: ${SEO_CONFIG.phone}
-📧 Email: ${SEO_CONFIG.email}
-`);
+// Configuración SEO aplicada
+console.log('🔍 SEO Optimizer loaded');
 
 // Exportar configuración para uso global
 window.SEO_CONFIG = SEO_CONFIG;

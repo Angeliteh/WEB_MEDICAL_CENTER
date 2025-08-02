@@ -145,8 +145,8 @@ class LanguageManager {
         const keys = key.split('.');
         let translation = this.translations[this.currentLanguage];
 
-        // Debug: mostrar la primera vez que se busca una clave específica
-        if (key === 'features.title') {
+        // Debug: solo en desarrollo
+        if (key === 'features.title' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
             console.log('🔍 Debug features.title:');
             console.log('- currentLanguage:', this.currentLanguage);
             console.log('- translations disponibles:', Object.keys(this.translations));

@@ -131,29 +131,8 @@ const autoConfig = getBusinessConfig(WHATSAPP_CONFIG.businessType);
 WHATSAPP_CONFIG.businessName = autoConfig.businessName;
 WHATSAPP_CONFIG.businessHours.schedule = autoConfig.schedule;
 
-// 📋 GUÍA DE CONFIGURACIÓN RÁPIDA
-console.log(`
-🚀 WHATSAPP BUSINESS - GUÍA DE CONFIGURACIÓN
-
-1. 📱 CAMBIAR NÚMERO DE WHATSAPP:
-   Editar: WHATSAPP_CONFIG.phoneNumber = 'TU_NUMERO'
-   Formato: código país + número (sin espacios, sin +)
-   
-2. 🏢 PERSONALIZAR NEGOCIO:
-   - businessName: Nombre de tu negocio
-   - businessType: medical, legal, creative, business
-   
-3. 🕒 CONFIGURAR HORARIOS:
-   - enabled: true/false
-   - schedule: horarios por día
-   
-4. 💬 MENSAJES PERSONALIZADOS:
-   Se configuran automáticamente según businessType
-   
-📞 Número actual: ${WHATSAPP_CONFIG.phoneNumber}
-🏢 Negocio: ${WHATSAPP_CONFIG.businessName}
-📋 Tipo: ${WHATSAPP_CONFIG.businessType}
-`);
+// Configuración de WhatsApp Business aplicada
+console.log('📱 WhatsApp Business Manager loaded');
 
 // Exportar configuración para uso global
 window.WHATSAPP_CONFIG = WHATSAPP_CONFIG;

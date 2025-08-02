@@ -1,4 +1,4 @@
-// Sistema de traducciones para Plantilla Médica Original
+// Sistema de traducciones para Centro Médico Profesional
 // Soporte para Español (ES) e Inglés (EN)
 
 const translations = {
@@ -17,7 +17,11 @@ const translations = {
             gallery: "Galería",
             team: "Equipo",
             appointment: "Citas",
-            contact: "Contacto"
+            contact: "Contacto",
+            controls: "Configuración",
+            darkMode: "Modo Oscuro",
+            language: "Idioma",
+            accessibility: "Accesibilidad"
         },
 
         // Header
@@ -61,7 +65,91 @@ const translations = {
                 email: 'support@medic.com',
                 phone: '(88017) +123 4567'
             },
+            legal: 'Legal',
+            privacy: 'Política de Privacidad',
+            terms: 'Términos y Condiciones',
+            cookies: 'Política de Cookies',
+            cookieSettings: 'Configurar Cookies'
+        },
 
+        // Map Section
+        map: {
+            title: "Nuestra",
+            titleSpan: "Ubicación",
+            subtitle: "Visítanos en nuestras modernas instalaciones",
+            contactInfo: "Información de Contacto",
+            address: {
+                title: "Dirección",
+                text: "Carrera 15 #93-47<br>Bogotá, Colombia"
+            },
+            phone: {
+                title: "Teléfono",
+                text: "+57 (1) 234-5678"
+            },
+            email: {
+                title: "Email",
+                text: "contacto@centromedicobogota.com"
+            },
+            hours: {
+                title: "Horarios de Atención",
+                weekdays: "Lunes - Viernes: 8:00 AM - 6:00 PM",
+                saturday: "Sábados: 8:00 AM - 2:00 PM",
+                sunday: "Domingos: Emergencias"
+            },
+            directions: "Cómo Llegar"
+        },
+
+        // Privacy Policy Page
+        privacy: {
+            title: 'Política de Privacidad',
+            subtitle: 'Protección de Datos',
+            lastUpdate: 'Última actualización:',
+            section1: {
+                title: '1. Información General',
+                content1: 'En Centro Médico Profesional, nos comprometemos a proteger y respetar su privacidad. Esta política explica cómo recopilamos, utilizamos y protegemos su información personal cuando utiliza nuestros servicios.',
+                content2: 'Esta política se aplica a todos los servicios ofrecidos por Centro Médico Profesional, incluyendo nuestro sitio web, aplicaciones móviles y servicios médicos presenciales.'
+            },
+            section2: {
+                title: '2. Responsable del Tratamiento',
+                company: 'Empresa:',
+                address: 'Dirección:',
+                phone: 'Teléfono:',
+                email: 'Email:',
+                dpo: 'Delegado de Protección de Datos:'
+            }
+        },
+
+        // Terms and Conditions Page
+        terms: {
+            title: 'Términos y Condiciones',
+            subtitle: 'Condiciones de Uso',
+            lastUpdate: 'Última actualización:',
+            section1: {
+                title: '1. Aceptación de Términos',
+                content1: 'Al acceder y utilizar los servicios de Centro Médico Profesional, usted acepta estar sujeto a estos términos y condiciones de uso.',
+                content2: 'Estos términos se aplican a todos los usuarios del sitio web, aplicaciones móviles y servicios médicos presenciales.'
+            }
+        },
+
+        // Cookies Policy Page
+        cookies: {
+            title: 'Política de Cookies',
+            subtitle: 'Uso de Cookies',
+            lastUpdate: 'Última actualización:',
+            control: {
+                title: '🍪 Configurar Cookies',
+                description: 'Puede gestionar sus preferencias de cookies en cualquier momento:',
+                button: 'Configurar Cookies'
+            },
+            section1: {
+                title: '1. ¿Qué son las Cookies?',
+                content1: 'Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita nuestro sitio web.',
+                content2: 'Las cookies son ampliamente utilizadas para hacer que los sitios web funcionen de manera más eficiente.'
+            },
+            status: {
+                always: 'Siempre Activas',
+                optional: 'Opcional'
+            }
         },
 
         // About Page
@@ -585,17 +673,17 @@ const translations = {
             slide1: {
                 title: "Nuestros Mejores Cirujanos",
                 subtitle: "Contamos con especialistas certificados y tecnología de vanguardia para brindar la mejor atención médica a nuestros pacientes.",
-                button: "Conocer Más"
+                button: "Conocer Equipo"
             },
             slide2: {
-                title: "Cuidamos de Tu Salud", 
+                title: "Cuidamos de Tu Salud",
                 subtitle: "Centro médico profesional con más de 15 años de experiencia en atención médica integral.",
                 button: "Sobre Nosotros"
             },
             slide3: {
                 title: "Mejores Servicios Médicos",
                 subtitle: "Ofrecemos una amplia gama de servicios médicos especializados con los más altos estándares de calidad.",
-                button: "Ver Servicios"
+                button: "Nuestros Servicios"
             }
         },
 
@@ -615,7 +703,11 @@ const translations = {
                 title: "Horarios de Atención",
                 schedule: {
                     weekdays: "Lun - Vie",
-                    hours: "8:00 - 17:00"
+                    weekdayHours: "8:00 AM - 6:00 PM",
+                    saturday: "Sábado",
+                    saturdayHours: "8:00 AM - 2:00 PM",
+                    sunday: "Domingo",
+                    sundayHours: "Solo Emergencias"
                 }
             }
         },
@@ -778,10 +870,10 @@ const translations = {
                     subtitle: "Mejor Servicio a Bajo Costo",
                     description: "Habitaciones cómodas y completamente equipadas para una estancia hospitalaria de calidad."
                 },
-                germsProtection: {
-                    title: "Protección Sanitaria",
-                    subtitle: "Mejor Servicio a Bajo Costo",
-                    description: "Protocolos estrictos de higiene y desinfección para mantener un ambiente seguro."
+                infectiousControl: {
+                    title: "Control de Infecciones",
+                    subtitle: "Protocolos de Seguridad Avanzados",
+                    description: "Protocolos estrictos de higiene y desinfección para mantener un ambiente médico seguro."
                 },
                 psychology: {
                     title: "Psicología",
@@ -987,7 +1079,11 @@ const translations = {
             gallery: "Gallery",
             team: "Team",
             appointment: "Appointment",
-            contact: "Contact"
+            contact: "Contact",
+            controls: "Settings",
+            darkMode: "Dark Mode",
+            language: "Language",
+            accessibility: "Accessibility"
         },
 
         // Header
@@ -1031,7 +1127,91 @@ const translations = {
                 email: 'support@medic.com',
                 phone: '(88017) +123 4567'
             },
+            legal: 'Legal',
+            privacy: 'Privacy Policy',
+            terms: 'Terms and Conditions',
+            cookies: 'Cookie Policy',
+            cookieSettings: 'Cookie Settings'
+        },
 
+        // Map Section
+        map: {
+            title: "Our",
+            titleSpan: "Location",
+            subtitle: "Visit us at our modern facilities",
+            contactInfo: "Contact Information",
+            address: {
+                title: "Address",
+                text: "Carrera 15 #93-47<br>Bogotá, Colombia"
+            },
+            phone: {
+                title: "Phone",
+                text: "+57 (1) 234-5678"
+            },
+            email: {
+                title: "Email",
+                text: "contacto@centromedicobogota.com"
+            },
+            hours: {
+                title: "Office Hours",
+                weekdays: "Monday - Friday: 8:00 AM - 6:00 PM",
+                saturday: "Saturday: 8:00 AM - 2:00 PM",
+                sunday: "Sunday: Emergencies Only"
+            },
+            directions: "Get Directions"
+        },
+
+        // Privacy Policy Page
+        privacy: {
+            title: 'Privacy Policy',
+            subtitle: 'Data Protection',
+            lastUpdate: 'Last updated:',
+            section1: {
+                title: '1. General Information',
+                content1: 'At Professional Medical Center, we are committed to protecting and respecting your privacy. This policy explains how we collect, use and protect your personal information when you use our services.',
+                content2: 'This policy applies to all services offered by Professional Medical Center, including our website, mobile applications and in-person medical services.'
+            },
+            section2: {
+                title: '2. Data Controller',
+                company: 'Company:',
+                address: 'Address:',
+                phone: 'Phone:',
+                email: 'Email:',
+                dpo: 'Data Protection Officer:'
+            }
+        },
+
+        // Terms and Conditions Page
+        terms: {
+            title: 'Terms and Conditions',
+            subtitle: 'Terms of Use',
+            lastUpdate: 'Last updated:',
+            section1: {
+                title: '1. Acceptance of Terms',
+                content1: 'By accessing and using the services of Professional Medical Center, you agree to be bound by these terms and conditions of use.',
+                content2: 'These terms apply to all users of the website, mobile applications and in-person medical services.'
+            }
+        },
+
+        // Cookies Policy Page
+        cookies: {
+            title: 'Cookie Policy',
+            subtitle: 'Cookie Usage',
+            lastUpdate: 'Last updated:',
+            control: {
+                title: '🍪 Configure Cookies',
+                description: 'You can manage your cookie preferences at any time:',
+                button: 'Configure Cookies'
+            },
+            section1: {
+                title: '1. What are Cookies?',
+                content1: 'Cookies are small text files that are stored on your device when you visit our website.',
+                content2: 'Cookies are widely used to make websites work more efficiently.'
+            },
+            status: {
+                always: 'Always Active',
+                optional: 'Optional'
+            }
         },
 
         // About Page
@@ -1555,7 +1735,7 @@ const translations = {
             slide1: {
                 title: "Our Best Surgeons",
                 subtitle: "We have certified specialists and cutting-edge technology to provide the best medical care to our patients.",
-                button: "Learn More"
+                button: "Meet Our Team"
             },
             slide2: {
                 title: "We Care for Your Health",
@@ -1565,7 +1745,7 @@ const translations = {
             slide3: {
                 title: "Best Medical Services",
                 subtitle: "We offer a wide range of specialized medical services with the highest quality standards.",
-                button: "View Services"
+                button: "Our Services"
             }
         },
 
@@ -1585,7 +1765,11 @@ const translations = {
                 title: "Working Hours",
                 schedule: {
                     weekdays: "Mon - Fri",
-                    hours: "8:00 - 17:00"
+                    weekdayHours: "8:00 AM - 6:00 PM",
+                    saturday: "Saturday",
+                    saturdayHours: "8:00 AM - 2:00 PM",
+                    sunday: "Sunday",
+                    sundayHours: "Emergency Only"
                 }
             }
         },
@@ -1748,10 +1932,10 @@ const translations = {
                     subtitle: "Better Service At Low Cost",
                     description: "Comfortable and fully equipped rooms for quality hospital stay."
                 },
-                germsProtection: {
-                    title: "Germs Protection",
-                    subtitle: "Better Service At Low Cost",
-                    description: "Strict hygiene and disinfection protocols to maintain a safe environment."
+                infectiousControl: {
+                    title: "Infection Control",
+                    subtitle: "Advanced Safety Protocols",
+                    description: "Strict hygiene and disinfection protocols to maintain a safe medical environment."
                 },
                 psychology: {
                     title: "Psychology",

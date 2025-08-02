@@ -1,8 +1,6 @@
 /**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
+ * Centro Médico Profesional - Sistema JavaScript Principal
+ * Funcionalidades avanzadas para sitio web médico profesional
  */
 
 (function ($) {
@@ -90,20 +88,23 @@
 	$('.testimonial-carousel').slick({
 		infinite: true,
 		arrows: false,
-		// autoplay: true,
+		autoplay: true,
+		autoplaySpeed: 4000,
 		slidesToShow: 2,
 		dots: true,
-		slidesToScroll: 2,
+		slidesToScroll: 1,
 		responsive: [{
 			breakpoint: 991,
 			settings: {
-				slidesToShow: 2
+				slidesToShow: 1,
+				slidesToScroll: 1
 			}
 		},
 		{
 			breakpoint: 525,
 			settings: {
-				slidesToShow: 1
+				slidesToShow: 1,
+				slidesToScroll: 1
 			}
 		}]
 	});

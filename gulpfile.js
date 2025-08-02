@@ -43,10 +43,8 @@ gulp.task("html:build", function () {
     )
     .pipe(
       comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
+    Centro Médico Profesional - Sitio Web Oficial
+    Desarrollado con tecnología avanzada para el sector médico
     `)
     )
     .pipe(gulp.dest(path.build.dirDev))
@@ -103,10 +101,8 @@ gulp.task("js:build", function () {
     .on("error", gutil.log)
     .pipe(
       comments(`
-  WEBSITE: https://themefisher.com
-  TWITTER: https://twitter.com/themefisher
-  FACEBOOK: https://www.facebook.com/themefisher
-  GITHUB: https://github.com/themefisher/
+  Centro Médico Profesional - Sitio Web Oficial
+  Desarrollado con tecnología avanzada para el sector médico
   `)
     )
     .pipe(gulp.dest(path.build.dirDev + "js/"))

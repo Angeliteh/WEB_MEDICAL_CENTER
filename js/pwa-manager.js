@@ -78,21 +78,38 @@ class PWAManager {
     async registerServiceWorker() {
         try {
             this.serviceWorkerRegistration = await navigator.serviceWorker.register('./sw.js', {
-                scope: './'
+                scope: './',
+                updateViaCache: 'none' // Forzar actualización del SW
             });
-            
+
             console.log('✅ PWA: Service Worker registered successfully');
-            
+            console.log('📍 PWA: Scope:', this.serviceWorkerRegistration.scope);
+
+            // Verificar estado del service worker
+            if (this.serviceWorkerRegistration.installing) {
+                console.log('🔧 PWA: Service Worker installing...');
+            } else if (this.serviceWorkerRegistration.waiting) {
+                console.log('⏳ PWA: Service Worker waiting...');
+            } else if (this.serviceWorkerRegistration.active) {
+                console.log('🚀 PWA: Service Worker active and ready!');
+            }
+
             // Escuchar actualizaciones
             this.serviceWorkerRegistration.addEventListener('updatefound', () => {
                 this.handleServiceWorkerUpdate();
             });
-            
+
+            // Verificar si hay un SW esperando
+            if (this.serviceWorkerRegistration.waiting) {
+                this.showUpdateAvailable();
+            }
+
             // Verificar si hay actualizaciones
             this.serviceWorkerRegistration.update();
-            
+
         } catch (error) {
             console.error('❌ PWA: Service Worker registration failed:', error);
+            console.error('❌ PWA: Error details:', error.message);
         }
     }
     

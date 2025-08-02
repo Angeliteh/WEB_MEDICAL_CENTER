@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ** Basic Page Needs ** -->
+  <meta charset="utf-8">
+  <title>Política de Cookies - Centro Médico Profesional</title>
+
+  <!-- ** Mobile Specific Metas ** -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Política de cookies del Centro Médico Profesional. Información sobre el uso de cookies y tecnologías similares.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Centro Médico Profesional">
+
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#1e88e5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Centro Médico">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.min.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="./plugins/fontawesome/css/all.min.css">
+  <!-- Animation -->
+  <link rel="stylesheet" href="./plugins/animation/animate.css">
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Dark Mode CSS -->
+  <link rel="stylesheet" href="./css/dark-mode.css">
+  <!-- Accessibility CSS -->
+  <link rel="stylesheet" href="./css/accessibility.css">
+  <!-- PWA Styles -->
+  <link rel="stylesheet" href="./css/pwa-styles.css">
+  <!-- Security Styles -->
+  <link rel="stylesheet" href="./css/security-styles.css">
+</head>
+
+<body>
+  <!-- Header Start -->
+  <div id="header-placeholder"></div>
+  <!-- Header End -->
+
+  <!-- Navbar Start -->
+  <div id="navbar-placeholder"></div>
+  <!-- Navbar End -->
+
+  <!-- Page Title -->
+  <section class="page-title bg-1">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block text-center">
+            <span class="text-white font-weight-bold text-lg" data-translate="cookies.subtitle">Uso de Cookies</span>
+            <h1 class="text-capitalize mb-5 text-lg" data-translate="cookies.title">Política de Cookies</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cookies Policy Content -->
+  <section class="section cookies-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="cookies-wrapper">
+            
+            <!-- Última actualización -->
+            <div class="update-info mb-4">
+              <p class="text-muted"><strong data-translate="cookies.lastUpdate">Última actualización:</strong> <span id="last-update-date">Agosto 2024</span></p>
+            </div>
+
+            <!-- Control de Cookies -->
+            <div class="cookie-control-section mb-5 p-4 bg-light rounded">
+              <h3 data-translate="cookies.control.title">🍪 Configurar Cookies</h3>
+              <p data-translate="cookies.control.description">Puede gestionar sus preferencias de cookies en cualquier momento:</p>
+              <button onclick="if(window.CookieManager) { window.CookieManager.resetConsent(); } else { alert('Sistema de cookies cargando...'); }" class="btn btn-primary">
+                <i class="fas fa-cog"></i> <span data-translate="cookies.control.button">Configurar Cookies</span>
+              </button>
+            </div>
+
+            <!-- 1. ¿Qué son las cookies? -->
+            <div class="cookies-section mb-5">
+              <h2 data-translate="cookies.section1.title">1. ¿Qué son las Cookies?</h2>
+              <p data-translate="cookies.section1.content1">Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita nuestro sitio web. Estas cookies nos permiten reconocer su dispositivo y recordar información sobre su visita.</p>
+              <p data-translate="cookies.section1.content2">Las cookies son ampliamente utilizadas para hacer que los sitios web funcionen de manera más eficiente, así como para proporcionar información a los propietarios del sitio.</p>
+            </div>
+
+            <!-- 2. Tipos de cookies que utilizamos -->
+            <div class="cookies-section mb-5">
+              <h2 data-translate="cookies.section2.title">2. Tipos de Cookies que Utilizamos</h2>
+              
+              <div class="cookie-types">
+                <!-- Cookies Necesarias -->
+                <div class="cookie-type-card mb-4 p-4 border rounded">
+                  <h3 class="text-success" data-translate="cookies.section2.necessary.title">
+                    <i class="fas fa-shield-alt"></i> Cookies Necesarias
+                  </h3>
+                  <p data-translate="cookies.section2.necessary.description">Estas cookies son esenciales para el funcionamiento del sitio web y no se pueden desactivar.</p>
+                  <ul>
+                    <li data-translate="cookies.section2.necessary.item1">Gestión de sesiones de usuario</li>
+                    <li data-translate="cookies.section2.necessary.item2">Configuración de idioma</li>
+                    <li data-translate="cookies.section2.necessary.item3">Preferencias de modo oscuro</li>
+                    <li data-translate="cookies.section2.necessary.item4">Configuración de accesibilidad</li>
+                    <li data-translate="cookies.section2.necessary.item5">Protección contra ataques CSRF</li>
+                  </ul>
+                  <div class="cookie-status">
+                    <span class="badge badge-success" data-translate="cookies.status.always">Siempre Activas</span>
+                  </div>
+                </div>
+
+                <!-- Cookies Analíticas -->
+                <div class="cookie-type-card mb-4 p-4 border rounded">
+                  <h3 class="text-info" data-translate="cookies.section2.analytics.title">
+                    <i class="fas fa-chart-bar"></i> Cookies Analíticas
+                  </h3>
+                  <p data-translate="cookies.section2.analytics.description">Nos ayudan a entender cómo los visitantes interactúan con el sitio web.</p>
+                  <ul>
+                    <li data-translate="cookies.section2.analytics.item1">Google Analytics (estadísticas de visitas)</li>
+                    <li data-translate="cookies.section2.analytics.item2">Tiempo de permanencia en páginas</li>
+                    <li data-translate="cookies.section2.analytics.item3">Páginas más visitadas</li>
+                    <li data-translate="cookies.section2.analytics.item4">Fuentes de tráfico</li>
+                  </ul>
+                  <div class="cookie-status">
+                    <span class="badge badge-info" data-translate="cookies.status.optional">Opcional</span>
+                  </div>
+                </div>
+
+                <!-- Cookies de Marketing -->
+                <div class="cookie-type-card mb-4 p-4 border rounded">
+                  <h3 class="text-warning" data-translate="cookies.section2.marketing.title">
+                    <i class="fas fa-bullhorn"></i> Cookies de Marketing
+                  </h3>
+                  <p data-translate="cookies.section2.marketing.description">Se utilizan para mostrar anuncios relevantes y medir su efectividad.</p>
+                  <ul>
+                    <li data-translate="cookies.section2.marketing.item1">Facebook Pixel (anuncios dirigidos)</li>
+                    <li data-translate="cookies.section2.marketing.item2">Google Ads (remarketing)</li>
+                    <li data-translate="cookies.section2.marketing.item3">Seguimiento de conversiones</li>
+                  </ul>
+                  <div class="cookie-status">
+                    <span class="badge badge-warning" data-translate="cookies.status.optional">Opcional</span>
+                  </div>
+                </div>
+
+                <!-- Cookies de Preferencias -->
+                <div class="cookie-type-card mb-4 p-4 border rounded">
+                  <h3 class="text-secondary" data-translate="cookies.section2.preferences.title">
+                    <i class="fas fa-user-cog"></i> Cookies de Preferencias
+                  </h3>
+                  <p data-translate="cookies.section2.preferences.description">Permiten recordar sus preferencias y personalizar su experiencia.</p>
+                  <ul>
+                    <li data-translate="cookies.section2.preferences.item1">Configuración de fuentes</li>
+                    <li data-translate="cookies.section2.preferences.item2">Preferencias de contraste</li>
+                    <li data-translate="cookies.section2.preferences.item3">Configuración personalizada</li>
+                  </ul>
+                  <div class="cookie-status">
+                    <span class="badge badge-secondary" data-translate="cookies.status.optional">Opcional</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Duración de las cookies -->
+            <div class="cookies-section mb-5">
+              <h2 data-translate="cookies.section3.title">3. Duración de las Cookies</h2>
+              
+              <div class="duration-info">
+                <h3 data-translate="cookies.section3.subtitle1">3.1 Cookies de Sesión</h3>
+                <p data-translate="cookies.section3.content1">Se eliminan automáticamente cuando cierra su navegador.</p>
+                
+                <h3 data-translate="cookies.section3.subtitle2">3.2 Cookies Persistentes</h3>
+                <p data-translate="cookies.section3.content2">Permanecen en su dispositivo durante un período específico:</p>
+                <ul>
+                  <li data-translate="cookies.section3.item1">Preferencias de idioma: 1 año</li>
+                  <li data-translate="cookies.section3.item2">Configuración de accesibilidad: 1 año</li>
+                  <li data-translate="cookies.section3.item3">Consentimiento de cookies: 1 año</li>
+                  <li data-translate="cookies.section3.item4">Google Analytics: 2 años</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 4. Gestión de cookies -->
+            <div class="cookies-section mb-5">
+              <h2 data-translate="cookies.section4.title">4. Cómo Gestionar las Cookies</h2>
+              
+              <h3 data-translate="cookies.section4.subtitle1">4.1 A través de nuestro sitio web</h3>
+              <p data-translate="cookies.section4.content1">Puede gestionar sus preferencias de cookies utilizando nuestro panel de configuración:</p>
+              <button onclick="if(window.CookieManager) { window.CookieManager.resetConsent(); } else { alert('Sistema de cookies cargando...'); }" class="btn btn-outline-primary mb-3">
+                <i class="fas fa-cog"></i> <span data-translate="cookies.section4.button">Abrir Configuración de Cookies</span>
+              </button>
+
+              <h3 data-translate="cookies.section4.subtitle2">4.2 A través de su navegador</h3>
+              <p data-translate="cookies.section4.content2">También puede gestionar las cookies directamente desde su navegador:</p>
+              
+              <div class="browser-instructions">
+                <div class="browser-item mb-3">
+                  <h4><i class="fab fa-chrome"></i> Google Chrome</h4>
+                  <p data-translate="cookies.section4.chrome">Configuración > Privacidad y seguridad > Cookies y otros datos de sitios</p>
+                </div>
+                <div class="browser-item mb-3">
+                  <h4><i class="fab fa-firefox"></i> Mozilla Firefox</h4>
+                  <p data-translate="cookies.section4.firefox">Opciones > Privacidad y seguridad > Cookies y datos del sitio</p>
+                </div>
+                <div class="browser-item mb-3">
+                  <h4><i class="fab fa-safari"></i> Safari</h4>
+                  <p data-translate="cookies.section4.safari">Preferencias > Privacidad > Gestionar datos de sitios web</p>
+                </div>
+                <div class="browser-item mb-3">
+                  <h4><i class="fab fa-edge"></i> Microsoft Edge</h4>
+                  <p data-translate="cookies.section4.edge">Configuración > Cookies y permisos de sitio > Cookies y datos almacenados</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Cookies de terceros -->
+            <div class="cookies-section mb-5">
+              <h2 data-translate="cookies.section5.title">5. Cookies de Terceros</h2>
+              <p data-translate="cookies.section5.content1">Algunos de nuestros socios pueden establecer cookies en su dispositivo cuando visita nuestro sitio:</p>
+              
+              <div class="third-party-cookies">
+                <div class="third-party-item mb-3 p-3 border-left border-primary">
+                  <h4>Google Analytics</h4>
+                  <p data-translate="cookies.section5.google">Utilizado para analizar el tráfico del sitio web y mejorar nuestros servicios.</p>
+                  <small class="text-muted">Política de privacidad: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></small>
+                </div>
+                
+                <div class="third-party-item mb-3 p-3 border-left border-info">
+                  <h4>Facebook Pixel</h4>
+                  <p data-translate="cookies.section5.facebook">Utilizado para anuncios dirigidos y medición de conversiones.</p>
+                  <small class="text-muted">Política de privacidad: <a href="https://www.facebook.com/privacy/explanation" target="_blank">https://www.facebook.com/privacy/explanation</a></small>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Sus derechos -->
+            <div class="cookies-section mb-5">
+              <h2 data-translate="cookies.section6.title">6. Sus Derechos</h2>
+              <p data-translate="cookies.section6.content1">Usted tiene derecho a:</p>
+              <ul>
+                <li data-translate="cookies.section6.item1">Aceptar o rechazar cookies no esenciales</li>
+                <li data-translate="cookies.section6.item2">Cambiar sus preferencias en cualquier momento</li>
+                <li data-translate="cookies.section6.item3">Eliminar cookies existentes de su dispositivo</li>
+                <li data-translate="cookies.section6.item4">Navegar sin cookies (funcionalidad limitada)</li>
+              </ul>
+            </div>
+
+            <!-- 7. Contacto -->
+            <div class="cookies-section mb-5">
+              <h2 data-translate="cookies.section7.title">7. Contacto</h2>
+              <p data-translate="cookies.section7.content1">Si tiene preguntas sobre nuestra política de cookies, puede contactarnos:</p>
+              
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <i class="fas fa-envelope"></i>
+                  <span data-translate="cookies.section7.email">Email: dpo@centromedico.com</span>
+                </div>
+                <div class="contact-method">
+                  <i class="fas fa-phone"></i>
+                  <span data-translate="cookies.section7.phone">Teléfono: + (52) 55 1234-5678</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Start -->
+  <div id="footer-placeholder"></div>
+  <!-- Footer End -->
+
+  <!-- WhatsApp Component -->
+  <div id="whatsapp-placeholder"></div>
+
+  <!-- Essential Scripts -->
+  <script src="./plugins/jquery.min.js"></script>
+  <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- PREMIUM FEATURES SYSTEM -->
+  <!-- LANGUAGE SYSTEM -->
+  <script src="./js/translations.js"></script>
+  <script src="./js/language-manager.js"></script>
+
+  <!-- DARK MODE SYSTEM -->
+  <script src="./js/dark-mode.js"></script>
+
+  <!-- WHATSAPP BUSINESS SYSTEM -->
+  <script src="./js/whatsapp-config.js"></script>
+  <script src="./js/whatsapp-business.js"></script>
+
+  <!-- SEO ADVANCED SYSTEM -->
+  <script src="./js/seo-config.js"></script>
+  <script src="./js/seo-optimizer.js"></script>
+
+  <!-- PWA SYSTEM -->
+  <script src="./js/pwa-config.js"></script>
+  <script src="./js/pwa-manager.js"></script>
+
+  <!-- ACCESSIBILITY SYSTEM -->
+  <script src="./js/accessibility-config.js"></script>
+  <script src="./js/accessibility-manager.js"></script>
+
+  <!-- SECURITY SYSTEM -->
+  <script src="./js/security-config.js"></script>
+  <script src="./js/security-manager.js"></script>
+
+  <!-- COOKIE MANAGER -->
+  <script src="./js/cookie-manager.js"></script>
+
+  <!-- Main Script -->
+  <script src="./js/script.js"></script>
+
+  <!-- Component Loader -->
+  <script src="./js/component-loader.js"></script>
+
+  <!-- Mobile Navbar -->
+  <script src="./js/navbar-mobile.js"></script>
+
+  <!-- Mobile Controls Sync -->
+  <script src="./js/mobile-controls-sync.js"></script>
+
+  <script>
+    // Actualizar fecha de última modificación
+    document.getElementById('last-update-date').textContent = new Date().toLocaleDateString('es-ES', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  </script>
+
+</body>
+</html>

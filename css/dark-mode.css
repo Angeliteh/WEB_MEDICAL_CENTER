@@ -27,16 +27,16 @@
   --shadow-dark: rgba(0, 0, 0, 0.3);
 }
 
-/* Dark Mode Toggle Button Styles */
+/* Dark Mode Toggle Button Styles - CORREGIDO */
 #darkModeToggle {
-  color: #ffffff !important;
+  /* Removido color blanco problemático */
   transition: all 0.3s ease;
   padding: 8px 12px;
   border-radius: 6px;
 }
 
 #darkModeToggle:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+  /* Removido background problemático */
   transform: scale(1.05);
 }
 

@@ -25,6 +25,44 @@
           <a class="nav-link" href="./contact.html" data-translate="navigation.contact" tabindex="0">Contacto</a>
         </li>
       </ul>
+
+      <!-- Controles móviles dentro del menú desplegable -->
+      <div class="mobile-menu-controls">
+        <div class="mobile-menu-controls-title" data-translate="navigation.controls">Configuración</div>
+
+        <!-- Dark Mode Toggle para móvil -->
+        <div class="mobile-menu-control-item">
+          <button class="mobile-menu-control-btn" id="darkModeToggleMobileMenu"
+                  title="Cambiar modo oscuro" tabindex="0" aria-label="Botón de modo oscuro móvil">
+            <i class="fas fa-moon" id="darkModeIconMobileMenu"></i>
+            <span data-translate="navigation.darkMode">Modo Oscuro</span>
+          </button>
+        </div>
+
+        <!-- Language selector para móvil -->
+        <div class="mobile-menu-control-item">
+          <div class="mobile-language-menu">
+            <div class="mobile-language-title" data-translate="navigation.language">Idioma</div>
+            <div class="mobile-language-options">
+              <button class="mobile-lang-btn" data-lang="es" tabindex="0">
+                <span class="flag-emoji">🇪🇸</span> Español
+              </button>
+              <button class="mobile-lang-btn" data-lang="en" tabindex="0">
+                <span class="flag-emoji">🇺🇸</span> English
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón de accesibilidad para móvil -->
+        <div class="mobile-menu-control-item">
+          <button class="mobile-menu-control-btn" id="accessibility-toggle-mobile-menu"
+                  title="Opciones de Accesibilidad" tabindex="0" aria-label="Abrir opciones de accesibilidad">
+            <i class="fas fa-universal-access"></i>
+            <span data-translate="navigation.accessibility">Accesibilidad</span>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

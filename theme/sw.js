@@ -2,62 +2,62 @@
 // Sistema completo de cache y funcionamiento offline
 
 const CACHE_NAME = 'centro-medico-v1.0.0';
-const OFFLINE_URL = '/offline.html';
+const OFFLINE_URL = './offline.html';
 
 // Archivos críticos para el App Shell
 const CORE_CACHE_FILES = [
-  '/theme/',
-  '/theme/index.html',
-  '/theme/offline.html',
+  './',
+  './index.html',
+  './offline.html',
 
   // CSS críticos
-  '/theme/css/bootstrap.min.css',
-  '/theme/css/style.css',
-  '/theme/css/dark-mode.css',
-  '/theme/css/whatsapp-button.css',
-  '/theme/css/pwa-styles.css',
+  './plugins/bootstrap/bootstrap.min.css',
+  './css/style.css',
+  './css/dark-mode.css',
+  './css/whatsapp-button.css',
+  './css/pwa-styles.css',
 
   // JavaScript críticos
-  '/theme/js/jquery.min.js',
-  '/theme/js/bootstrap.min.js',
-  '/theme/js/script.js',
-  '/theme/js/language-manager.js',
-  '/theme/js/translations.js',
-  '/theme/js/dark-mode.js',
-  '/theme/js/whatsapp-business.js',
-  '/theme/js/seo-optimizer.js',
-  '/theme/js/pwa-manager.js',
+  './plugins/jquery.min.js',
+  './plugins/bootstrap/bootstrap.min.js',
+  './js/script.js',
+  './js/language-manager.js',
+  './js/translations.js',
+  './js/dark-mode.js',
+  './js/whatsapp-business.js',
+  './js/seo-optimizer.js',
+  './js/pwa-manager.js',
 
   // Configuraciones
-  '/theme/js/whatsapp-config.js',
-  '/theme/js/seo-config.js',
-  '/theme/manifest.json',
+  './js/whatsapp-config.js',
+  './js/seo-config.js',
+  './manifest.json',
 
   // Fuentes críticas
-  '/theme/plugins/fontawesome/css/all.min.css',
+  './plugins/fontawesome/css/all.min.css',
 
   // Imágenes críticas
-  '/theme/images/logo.png',
-  '/theme/images/icons/icon-192x192.png',
-  '/theme/images/icons/icon-512x512.png'
+  './images/logo.png',
+  './images/icons/icon-192x192.png',
+  './images/icons/icon-512x512.png'
 ];
 
 // Archivos de contenido (cache bajo demanda)
 const CONTENT_CACHE_FILES = [
   // Imágenes de contenido
-  '/images/about/',
-  '/images/gallery/',
-  '/images/team/',
-  '/images/testimonials/',
-  '/images/blog/',
-  
+  './images/about/',
+  './images/gallery/',
+  './images/team/',
+  './images/testimonials/',
+  './images/blog/',
+
   // Plugins adicionales
-  '/plugins/',
-  
+  './plugins/',
+
   // Páginas adicionales
-  '/about.html',
-  '/services.html',
-  '/contact.html'
+  './about.html',
+  './service.html',
+  './contact.html'
 ];
 
 // Instalación del Service Worker

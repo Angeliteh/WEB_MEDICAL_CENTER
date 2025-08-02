@@ -254,32 +254,8 @@ function generateManifest() {
     };
 }
 
-// 📋 GUÍA DE CONFIGURACIÓN RÁPIDA
-console.log(`
-📱 PWA SYSTEM - GUÍA DE CONFIGURACIÓN
-
-1. 📱 PERSONALIZAR APP:
-   - appName: Nombre completo de la app
-   - shortName: Nombre corto (máximo 12 caracteres)
-   - description: Descripción de la app
-   
-2. 🎨 CONFIGURAR COLORES:
-   - themeColor: Color principal
-   - backgroundColor: Color de fondo
-   
-3. 🔗 CONFIGURAR ATAJOS:
-   - shortcuts: Personalizar según el negocio
-   
-4. 🖼️ ICONOS REQUERIDOS:
-   - Crear iconos en images/icons/
-   - Tamaños: 72x72, 96x96, 128x128, 144x144, 152x152, 192x192, 384x384, 512x512
-   
-📊 Configuración actual:
-📱 App: ${PWA_CONFIG.appName}
-🏷️ Nombre corto: ${PWA_CONFIG.shortName}
-🎨 Color: ${PWA_CONFIG.themeColor}
-📂 Categoría: ${PWA_CONFIG.categories[0]}
-`);
+// Configuración PWA aplicada
+console.log('📱 PWA Manager loaded');
 
 // Aplicar configuración automática por sector
 const pwaAutoConfig = getSectorConfig(PWA_CONFIG.categories[0]);

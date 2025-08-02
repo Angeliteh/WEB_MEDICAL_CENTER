@@ -1,9 +1,9 @@
 {
-  "name": "medic",
-  "version": "1.0.0",
-  "description": "medic free bootstrap medical template",
-  "author": "Themefisher",
-  "license": "MIT",
+  "name": "centro-medico-profesional",
+  "version": "2.0.0",
+  "description": "Centro Médico Profesional - Sitio Web Oficial",
+  "author": "Centro Médico Profesional",
+  "license": "Proprietary",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build"
