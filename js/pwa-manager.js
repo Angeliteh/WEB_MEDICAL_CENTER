@@ -11,9 +11,9 @@ class PWAManager {
             // Configuración de instalación
             installPrompt: {
                 enabled: true,
-                showAfterSeconds: 30, // Mostrar prompt después de 30 segundos
-                showAfterPageViews: 2, // Mostrar después de 2 páginas vistas
-                hideAfterDismiss: 7 // Ocultar por 7 días si se rechaza
+                showAfterSeconds: 3, // Mostrar prompt después de 3 segundos
+                showAfterPageViews: 1, // Mostrar en la primera página
+                hideAfterDismiss: 1 // Ocultar por 1 día si se rechaza (para testing)
             },
             
             // Configuración de notificaciones
@@ -24,7 +24,7 @@ class PWAManager {
             
             // Configuración de cache
             cache: {
-                version: '1.1.0',
+                version: '2.0.0',
                 maxAge: 7 * 24 * 60 * 60 * 1000, // 7 días
                 maxSize: 50 * 1024 * 1024 // 50MB
             }
@@ -39,12 +39,15 @@ class PWAManager {
     }
     
     async init() {
+        // PWA habilitado con estrategia Network First optimizada
+        console.log('🚀 PWA: Starting with Network First strategy for fresh content');
+
         // Verificar soporte PWA
         if (!this.isPWASupported()) {
             console.warn('⚠️ PWA: Not supported in this browser');
             return;
         }
-        
+
         // Registrar Service Worker
         await this.registerServiceWorker();
         
@@ -74,7 +77,46 @@ class PWAManager {
     isPWASupported() {
         return 'serviceWorker' in navigator && 'PushManager' in window;
     }
-    
+
+    isDevelopment() {
+        // Detectar entorno de desarrollo
+        const hostname = window.location.hostname;
+        const isDev = hostname === 'localhost' ||
+                     hostname === '127.0.0.1' ||
+                     hostname.startsWith('192.168.') ||
+                     hostname.includes('local') ||
+                     window.location.port !== '';
+
+        // Permitir forzar PWA en desarrollo
+        const forcePWA = localStorage.getItem('FORCE_PWA') === 'true' ||
+                        window.FORCE_PWA === true;
+
+        return isDev && !forcePWA;
+    }
+
+    async unregisterServiceWorker() {
+        try {
+            if ('serviceWorker' in navigator) {
+                const registrations = await navigator.serviceWorker.getRegistrations();
+                for (let registration of registrations) {
+                    await registration.unregister();
+                    console.log('🧹 PWA: Service Worker unregistered');
+                }
+
+                // Limpiar caché
+                if ('caches' in window) {
+                    const cacheNames = await caches.keys();
+                    await Promise.all(
+                        cacheNames.map(cacheName => caches.delete(cacheName))
+                    );
+                    console.log('🧹 PWA: All caches cleared');
+                }
+            }
+        } catch (error) {
+            console.error('❌ PWA: Error unregistering Service Worker:', error);
+        }
+    }
+
     async registerServiceWorker() {
         try {
             this.serviceWorkerRegistration = await navigator.serviceWorker.register('./sw.js', {
@@ -135,19 +177,34 @@ class PWAManager {
     }
     
     setupInstallPrompt() {
+        console.log('🔧 PWA: Setting up install prompt...');
+
         // Capturar evento beforeinstallprompt
         window.addEventListener('beforeinstallprompt', (e) => {
             console.log('📱 PWA: Install prompt available');
             e.preventDefault();
             this.deferredPrompt = e;
-            
+
             // Mostrar botón de instalación después de un tiempo
             if (this.config.installPrompt.enabled) {
+                console.log(`⏰ PWA: Will show prompt in ${this.config.installPrompt.showAfterSeconds} seconds`);
                 setTimeout(() => {
+                    console.log('🚀 PWA: Attempting to show install prompt...');
                     this.showInstallPrompt();
                 }, this.config.installPrompt.showAfterSeconds * 1000);
             }
         });
+
+        // Verificar si el evento ya se disparó
+        setTimeout(() => {
+            if (!this.deferredPrompt) {
+                console.log('⚠️ PWA: beforeinstallprompt event not fired yet');
+                console.log('🔍 PWA: This might be because:');
+                console.log('   - App is already installed');
+                console.log('   - Browser doesn\'t support PWA install');
+                console.log('   - Manifest.json has issues');
+            }
+        }, 5000);
         
         // Detectar cuando la app se instala
         window.addEventListener('appinstalled', (e) => {

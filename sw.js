@@ -1,7 +1,7 @@
 // Service Worker - PWA System
 // Sistema completo de cache y funcionamiento offline
 
-const CACHE_NAME = 'centro-medico-v1.1.0';
+const CACHE_NAME = 'centro-medico-v2.0.0';
 const OFFLINE_URL = './offline.html';
 
 // Archivos críticos para el App Shell
@@ -184,7 +184,15 @@ async function handleNavigationRequest(request) {
   try {
     // NETWORK FIRST: Intentar red primero para contenido siempre actualizado
     console.log('📄 Service Worker: Trying network first:', request.url);
-    const networkResponse = await fetch(request);
+
+    // Agregar headers para evitar caché del navegador
+    const networkResponse = await fetch(request, {
+      cache: 'no-cache',
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache'
+      }
+    });
 
     if (networkResponse.ok) {
       // Cachear la nueva versión
@@ -203,23 +211,8 @@ async function handleNavigationRequest(request) {
       console.log('📄 Service Worker: Serving from cache (offline):', request.url);
       return cachedResponse;
     }
-  }
 
-    // Si no está en cache, intentar red
-    const networkResponse = await fetch(request, {
-      timeout: 3000 // Timeout más corto para mejor UX
-    });
-
-    if (networkResponse.ok) {
-      const cache = await caches.open(CACHE_NAME);
-      cache.put(request, networkResponse.clone());
-      return networkResponse;
-    }
-
-    throw new Error('Network response not ok');
-
-  } catch (error) {
-    console.log('🌐 Service Worker: Network failed, trying fallbacks for:', request.url);
+    console.log('🌐 Service Worker: No cache available, trying fallbacks for:', request.url);
 
     // Intentar página de inicio como fallback
     const homeResponse = await caches.match('./index.html');
