@@ -24,7 +24,7 @@ class PWAManager {
             
             // Configuración de cache
             cache: {
-                version: '2.0.0',
+                version: '2.1.0',
                 maxAge: 7 * 24 * 60 * 60 * 1000, // 7 días
                 maxSize: 50 * 1024 * 1024 // 50MB
             }

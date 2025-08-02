@@ -15,21 +15,7 @@
   <meta name="author" content="Centro Médico Profesional">
   <meta name="generator" content="Centro Médico Profesional v2.0">
 
-  <!-- PWA Meta Tags -->
-  <link rel="manifest" href="./manifest.json">
-  <meta name="theme-color" content="#1e88e5">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Centro Médico">
-  <meta name="msapplication-TileColor" content="#1e88e5">
-  <meta name="msapplication-config" content="browserconfig.xml">
 
-  <!-- PWA Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/icon-192x192.png">
-  <link rel="mask-icon" href="./images/icons/icon-192x192.png" color="#1e88e5">
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- bootstrap -->
@@ -54,8 +40,7 @@
   <link href="./css/dark-mode.css" rel="stylesheet">
   <!-- WhatsApp Business Styles -->
   <link href="./css/whatsapp-button.css" rel="stylesheet">
-  <!-- PWA Styles -->
-  <link href="./css/pwa-styles.css" rel="stylesheet">
+
   <!-- Accessibility Styles -->
   <link href="./css/accessibility.css" rel="stylesheet">
   <!-- Security Styles -->
@@ -961,10 +946,7 @@
 <script src="./js/seo-config.js"></script>
 <script src="./js/seo-optimizer.js"></script>
 
-<!-- PWA SYSTEM - OPTIMIZED WITH NETWORK FIRST STRATEGY -->
-<script src="./js/pwa-config.js"></script>
-<script src="./js/pwa-manager.js"></script>
-<script src="./js/pwa-icon-generator.js"></script>
+
 
 <!-- ACCESSIBILITY SYSTEM -->
 <script src="./js/accessibility-config.js"></script>
@@ -1003,6 +985,46 @@
 
 <!-- Sticky Header -->
 <script src="./js/sticky-header.js"></script>
+
+<!-- ONE-TIME CLEANUP SCRIPT - Remove any existing Service Worker -->
+<script>
+// Solo ejecutar si no se ha limpiado antes
+if (!localStorage.getItem('pwa_cleaned') && 'serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        if (registrations.length > 0) {
+            console.log('🧹 Found', registrations.length, 'Service Worker(s) to clean');
+            for(let registration of registrations) {
+                registration.unregister().then(function(boolean) {
+                    console.log('🧹 Service Worker unregistered:', boolean);
+                });
+            }
+
+            // Clear all caches
+            if ('caches' in window) {
+                caches.keys().then(function(cacheNames) {
+                    if (cacheNames.length > 0) {
+                        console.log('🧹 Found', cacheNames.length, 'cache(s) to clean');
+                        return Promise.all(
+                            cacheNames.map(function(cacheName) {
+                                console.log('🧹 Deleting cache:', cacheName);
+                                return caches.delete(cacheName);
+                            })
+                        );
+                    }
+                }).then(function() {
+                    console.log('🧹 PWA cleanup completed - Site now works like normal web');
+                    localStorage.setItem('pwa_cleaned', 'true');
+                });
+            }
+        } else {
+            console.log('✅ No Service Workers found - Site is clean');
+            localStorage.setItem('pwa_cleaned', 'true');
+        }
+    });
+} else if (localStorage.getItem('pwa_cleaned')) {
+    console.log('✅ PWA already cleaned - Site running as normal web');
+}
+</script>
 
 </body>
 

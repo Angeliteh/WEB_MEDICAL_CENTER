@@ -70,9 +70,6 @@ class MobileNavbar {
             navbar.classList.add('show-mobile');
             navbarCollapse.classList.add('show');
 
-            // Agregar overlay
-            this.createOverlay();
-
             console.log('📱 Menu opened');
         }
     }
@@ -88,46 +85,11 @@ class MobileNavbar {
             navbar.classList.remove('show-mobile');
             navbarCollapse.classList.remove('show');
 
-            // Remover overlay
-            this.removeOverlay();
-
             console.log('📱 Menu closed');
         }
     }
 
-    createOverlay() {
-        if (document.querySelector('.mobile-menu-overlay')) return;
 
-        const overlay = document.createElement('div');
-        overlay.className = 'mobile-menu-overlay';
-        overlay.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 9998;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        `;
-
-        document.body.appendChild(overlay);
-
-        // Fade in
-        setTimeout(() => overlay.style.opacity = '1', 10);
-
-        // Cerrar al hacer clic en overlay
-        overlay.addEventListener('click', () => this.closeMenu());
-    }
-
-    removeOverlay() {
-        const overlay = document.querySelector('.mobile-menu-overlay');
-        if (overlay) {
-            overlay.style.opacity = '0';
-            setTimeout(() => overlay.remove(), 300);
-        }
-    }
 
     setupAutoClose() {
         // Cerrar menú al hacer clic en un enlace

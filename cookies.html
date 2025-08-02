@@ -11,33 +11,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Centro Médico Profesional">
 
-  <!-- PWA Meta Tags -->
-  <link rel="manifest" href="./manifest.json">
-  <meta name="theme-color" content="#1e88e5">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Centro Médico">
+
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.min.css">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="./plugins/fontawesome/css/all.min.css">
   <!-- Animation -->
-  <link rel="stylesheet" href="./plugins/animation/animate.css">
+  <link rel="stylesheet" href="./plugins/animation/animate.min.css">
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href="./css/style.css">
   <!-- Dark Mode CSS -->
   <link rel="stylesheet" href="./css/dark-mode.css">
+  <!-- WhatsApp Business Styles -->
+  <link rel="stylesheet" href="./css/whatsapp-button.css">
   <!-- Accessibility CSS -->
   <link rel="stylesheet" href="./css/accessibility.css">
-  <!-- PWA Styles -->
-  <link rel="stylesheet" href="./css/pwa-styles.css">
   <!-- Security Styles -->
   <link rel="stylesheet" href="./css/security-styles.css">
+  <!-- Form Handler Styles -->
+  <link rel="stylesheet" href="./css/form-handler-styles.css">
 </head>
 
 <body>
@@ -282,7 +279,16 @@
 
   <!-- Essential Scripts -->
   <script src="./plugins/jquery.min.js"></script>
-  <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Popper.js v1 (required for Bootstrap 4 dropdowns) -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="./plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- Slick Slider -->
+  <script src="./plugins/slick/slick.min.js"></script>
+  <script src="./plugins/slick/slick-animation.min.js"></script>
+  <!-- FancyBox -->
+  <script src="./plugins/fancybox/jquery.fancybox.min.js" defer></script>
+  <!-- jquery-ui -->
+  <script src="./plugins/jquery-ui/jquery-ui.js" defer></script>
 
   <!-- PREMIUM FEATURES SYSTEM -->
   <!-- LANGUAGE SYSTEM -->
@@ -300,9 +306,7 @@
   <script src="./js/seo-config.js"></script>
   <script src="./js/seo-optimizer.js"></script>
 
-  <!-- PWA SYSTEM -->
-  <script src="./js/pwa-config.js"></script>
-  <script src="./js/pwa-manager.js"></script>
+
 
   <!-- ACCESSIBILITY SYSTEM -->
   <script src="./js/accessibility-config.js"></script>

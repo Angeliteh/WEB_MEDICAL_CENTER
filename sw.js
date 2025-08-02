@@ -1,7 +1,7 @@
 // Service Worker - PWA System
 // Sistema completo de cache y funcionamiento offline
 
-const CACHE_NAME = 'centro-medico-v2.0.0';
+const CACHE_NAME = 'centro-medico-v2.1.0';
 const OFFLINE_URL = './offline.html';
 
 // Archivos críticos para el App Shell
@@ -20,7 +20,7 @@ const CORE_CACHE_FILES = [
   './cookies.html',
 
   // CSS críticos
-  './plugins/bootstrap/css/bootstrap.min.css',
+  './plugins/bootstrap/bootstrap.min.css',
   './css/style.css',
   './css/dark-mode.css',
   './css/whatsapp-button.css',
@@ -29,7 +29,7 @@ const CORE_CACHE_FILES = [
 
   // JavaScript críticos
   './plugins/jquery.min.js',
-  './plugins/bootstrap/js/bootstrap.min.js',
+  './plugins/bootstrap/bootstrap.min.js',
   './js/script.js',
   './js/language-manager.js',
   './js/translations.js',
